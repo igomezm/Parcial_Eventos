@@ -1,28 +1,28 @@
 import {createAction, props} from '@ngrx/store';
  
 export const create = createAction(
- '[TODO] Create todo',
- props<{ text: string }>()
+ '[EVENTO] Create evento',
+ props<{ descripcion: string, estado:string, nombre:string, fecha:Date}>()
 );
  
 export const toggle = createAction(
- '[TODO] Toggle todo',
- props<{ id: number }>()
+ '[EVENTO] Toggle evento',
+ props<{ nombre: string  }>()
 );
  
 export const edit = createAction(
- '[TODO] Edit todo',
- props<{ id: number, text: string }>()
+ '[EVENTO] Edit evento',
+ props<{ nombre: string, descripcion: string }>()
 );
  
 export const remove = createAction(
- '[TODO] Remove todo',
- props<{ id: number }>()
+ '[TODO] Remove evento',
+ props<{ nombre: string }>()
 );
  
 export const toggleAll = createAction(
- '[TODO] Toggle All todo',
- props<{ completed: boolean }>()
+ '[EVENTO] Toggle All evento ',
+ props<{ descripcion: string }>()
 );
  
 export const clearComplete = createAction('[TODO] Clear Complete todo');
